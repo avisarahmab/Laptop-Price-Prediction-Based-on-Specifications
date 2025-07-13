@@ -1,0 +1,27 @@
+
+1. Latar Belakang dan Cara Kerja Bagging
+----------------------------------------
+Bagging (Bootstrap Aggregating) adalah teknik ensemble yang bertujuan untuk meningkatkan akurasi dan stabilitas model machine learning, terutama model yang memiliki high variance seperti decision tree. Latar belakang munculnya bagging adalah karena model tunggal sering kali overfitting pada data pelatihan. Dengan membuat beberapa subset data yang diambil secara acak (dengan pengembalian/bootstrapping), dan melatih model yang sama pada masing-masing subset, maka hasil prediksi akhir dapat diperoleh melalui voting (klasifikasi) atau rata-rata (regresi). Proses ini mengurangi overfitting dan meningkatkan generalisasi model.
+
+Cara kerja bagging:
+- Lakukan bootstrap sampling pada data training untuk membuat beberapa subset data.
+- Latih model (misalnya decision tree) pada masing-masing subset.
+- Gabungkan hasil prediksi dari seluruh model dengan voting mayoritas (klasifikasi) atau rata-rata (regresi).
+
+2. Perbedaan Random Forest dan XGBoost (Boosting)
+--------------------------------------------------
+
+Random Forest adalah algoritma berbasis bagging, sedangkan XGBoost (Extreme Gradient Boosting) adalah algoritma berbasis boosting. Perbedaan utamanya adalah:
+
+- Random Forest membangun banyak pohon keputusan secara paralel. Setiap pohon dilatih pada subset data acak, dan hasil akhirnya didapat dari voting atau rata-rata.
+- XGBoost membangun pohon secara bertahap (berurutan), di mana setiap pohon baru dibangun untuk memperbaiki kesalahan dari pohon sebelumnya. Proses ini mengutamakan iterasi dan pembobotan error, sehingga lebih fokus untuk memperbaiki kelemahan model sebelumnya.
+
+Singkatnya:
+- Random Forest: parallel training, fokus pada mengurangi variansi.
+- XGBoost: sequential training, fokus pada mengurangi bias.
+
+3. Pengertian Cross Validation
+------------------------------
+Cross Validation adalah teknik evaluasi model dengan cara membagi data menjadi beberapa subset (fold). Model dilatih pada sebagian data (training set) dan diuji pada bagian yang tersisa (validation set), lalu proses ini diulang beberapa kali (umumnya K-Fold). Tujuan utamanya adalah untuk mendapatkan estimasi performa model yang lebih stabil dan menghindari overfitting terhadap data training. Hasil akhir adalah rata-rata dari semua skor validasi.
+
+Contoh: pada 5-Fold Cross Validation, data dibagi menjadi 5 bagian, lalu dilatih pada 4 bagian dan diuji pada 1 bagian, dilakukan sebanyak 5 kali dengan bagian yang berbeda-beda sebagai validasi.
