@@ -4,11 +4,11 @@ Prediksi Harga Laptop Berdasarkan Spesifikasinya
 
 ## Repository Outline
 
-├── Conceptual.txt           # Permasalahan konseptual atau pertanyaan analisis yang ingin dijawab  
-├── dataset_raw.csv          # Data mentah yang diambil dari Kaggle sebelum diproses  
-├── Main.ipynb               # Notebook utama berisi proses pengolahan data dan pemodelan  
-├── Model_Inference.ipynb    # Notebook untuk melakukan inferensi/prediksi menggunakan model  
-├── README.md                # Dokumentasi utama yang menjelaskan proyek secara keseluruhan  
+├── Conceptual.txt  : Permasalahan konseptual atau pertanyaan analisis yang ingin dijawab  
+├── dataset_raw.csv : Data mentah yang diambil dari Kaggle sebelum diproses  
+├── Main.ipynb      : Notebook utama berisi proses pengolahan data dan pemodelan  
+├── Model_Inference.ipynb : Notebook untuk melakukan inferensi/prediksi menggunakan model  
+├── README.md       : Dokumentasi utama yang menjelaskan proyek secara keseluruhan  
 
 
 ## Problem Background
